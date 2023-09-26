@@ -1,1388 +1,243 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Beaming Notes  - Your Guide to Literature</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-    <link href="css/all.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-</head>
-<body>
-    <div class="sideBar">
-        <form class="search">
-            <input type="text" class="form-control">
-            <button type="submit">
-                <i class="bi bi-search"></i>
+    <title>House Journey</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- style for the footer-->
+    <style>
+      footer {
+          text-align: center;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          font-size: 14px;
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          background: transparent;
+      }
+    </style>  
+  </head>
+
+  <body>
+    <!-- ========== HEADER ========== -->
+    <header class="navbar-absolute-top">
+      <div class="header_top">
+        <div class="container">
+          <form action="" class="loc_form mr-30">
+            <i class="fa fa-map-marker-alt mr-1"></i>
+            <input type="text" placeholder="Enter your location" value="San Francisco, USA" readonly="" onkeypress="this.style.width = 
+            ((this.value.length + 1) * 7) + 'px';" style="min-width: 133px;">
+            <button class="change">Change</button>
+            <button class="explore" style="display: none;">Explore</button>
+          </form>
+          <div class="dropdown my_acc">
+            <a id="my_acc_drop" class="dropdown-toggle" href="#" role="button" aria-expanded="false">My Account</a>
+            <div class="dropdown-menu" aria-labelledby="my_acc_drop" style="min-width: 10rem;">
+              <a class="dropdown-item" href=""><i class="bi bi-person"></i> SignIn</a>
+              <a class="dropdown-item" href=""><i class="bi bi-box-arrow-in-right"></i> Create Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="header" class="navbar navbar-expand-lg navbar-end navbar-light">
+        <div class="container">
+          <nav class="navbar-nav-wrap">
+            <!-- Default Logo -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/logo.png" alt="">
+            </a>
+            <!-- End Default Logo -->
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-default">
+                <i class="bi-list"></i>
+              </span>
+              <span class="navbar-toggler-toggled">
+                <i class="bi-x"></i>
+              </span>
             </button>
-        </form>
-        <p class="mt-3 mb-2"><strong>Menu</strong></p>
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Solved Answer</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Cbse
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                    <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                    <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                    <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                    <li><a class="dropdown-item" href="#">William Blake</a></li>
-                    <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                    <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                    <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                    <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                    <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                    <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                    <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    icse
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                    <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                    <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                    <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                    <li><a class="dropdown-item" href="#">William Blake</a></li>
-                    <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                    <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                    <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                    <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                    <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                    <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                    <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Poets
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                    <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                    <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                    <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                    <li><a class="dropdown-item" href="#">William Blake</a></li>
-                    <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                    <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                    <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                    <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                    <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                    <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                    <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Us Notes
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                    <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                    <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                    <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                    <li><a class="dropdown-item" href="#">William Blake</a></li>
-                    <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                    <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                    <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                    <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                    <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                    <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                    <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Indonesian Poems
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                    <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                    <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                    <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                    <li><a class="dropdown-item" href="#">William Blake</a></li>
-                    <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                    <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                    <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                    <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                    <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                    <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                    <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Log In</a>
-            </li>
-        </ul>
-    </div>
-    <div class="body">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container">
-                <button class="hamburger navbar-toggler" type="button">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
-                <a class="navbar-brand me-auto ms-3" href="#">Navbar</a>                
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Solved Answer</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Cbse
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                                <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                                <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                                <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                                <li><a class="dropdown-item" href="#">William Blake</a></li>
-                                <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                                <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                                <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                                <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                                <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                                <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                                <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                icse
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                                <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                                <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                                <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                                <li><a class="dropdown-item" href="#">William Blake</a></li>
-                                <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                                <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                                <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                                <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                                <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                                <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                                <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Poets
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                                <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                                <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                                <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                                <li><a class="dropdown-item" href="#">William Blake</a></li>
-                                <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                                <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                                <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                                <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                                <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                                <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                                <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Us Notes
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                                <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                                <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                                <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                                <li><a class="dropdown-item" href="#">William Blake</a></li>
-                                <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                                <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                                <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                                <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                                <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                                <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                                <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Indonesian Poems
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Rudyard Kipling</a></li>
-                                <li><a class="dropdown-item" href="#">Samuel Taylor Coleridge</a></li>
-                                <li><a class="dropdown-item" href="#">Sarojini Naidu</a></li>
-                                <li><a class="dropdown-item" href="#">Thomas Gray</a></li>
-                                <li><a class="dropdown-item" href="#">William Blake</a></li>
-                                <li><a class="dropdown-item" href="#">William Shakespeare</a></li>
-                                <li><a class="dropdown-item" href="#">William Wordsworth</a></li>
-                                <li><a class="dropdown-item" href="#">Matthew Arnold</a></li>
-                                <li><a class="dropdown-item" href="#">Maya Angelou</a></li>
-                                <li><a class="dropdown-item" href="#">Pablo Neruda</a></li>
-                                <li><a class="dropdown-item" href="#">Rabindra Nath Tagore</a></li>
-                                <li><a class="dropdown-item" href="#">Robert Browning</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Log In</a>
-                        </li>
-                        <li class="nav-item">
-                            <button class="search_btn_header" data-bs-toggle="modal" data-bs-target="#searchModal">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="banner">
-            <div class="item">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="desc">
-                                <h1 class="fw-bold mb-3">Beaming Notes <br> Your Guide to Literature</h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                </p>
-                                <div class="text-left mt-4">
-                                    <a href="javascript:;" class="btn btn-primary">
-                                        Sign Up
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="img">
-                                <img src="image/head.svg" alt="" class="mt-md-0 mt-4">
-                            </div>
-                        </div>
+            <!-- End Toggler -->
+        
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <div class="navbar-absolute-top-scroller">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="service_prov" class="nav-link dropdown-toggle active" href="#" role="button" aria-expanded="false">Service Providers</a>
+                    <!-- Mega Menu -->
+                    <div class="dropdown-menu" aria-labelledby="service_prov" style="min-width: 12rem;">
+                      <a class="dropdown-item" href="listing.html">Dealer</a>
+                      <a class="dropdown-item" href="listing.html">Home Builder</a>
+                      <a class="dropdown-item" href="listing.html">Contractors</a>
                     </div>
-                </div>
+                    <!-- End Mega Menu -->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Write a Review</a>   
+                  </li>        
+                </ul>
+              </div>
             </div>
+            <!-- End Collapse -->
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="content" role="main">
+      <!-- Hero -->
+      <div class="bg-soft-primary-light position-relative overflow-hidden" style="min-height:100vh;">
+        <div class="container content-space-t-3 content-space-t-md-4 content-space-b-1 content-space-b-md-3 position-relative zi-2">
+          <div class="row mb-7">
+            <div class="col-md-6">
+              <!-- Heading -->
+              <div class="pe-lg-3">
+                <h1 class="display-4 text-dark">Find the Best <span class="text-warning">Businesses</span> in Town</h1>
+              </div>
+              <!-- End Heading -->
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+
+          <div class="row">
+            <div class="col-md-9">
+              <form action="listing.html" method="get">
+                <!-- Input Card -->
+                <div class="input-card input-card-sm">
+                  <div class="input-card-form">
+                    <!-- Input Group -->
+                    <div class="input-group input-group-merge">
+                      <span class="input-group-prepend input-group-text">
+                        <i class="bi-search"></i>
+                      </span>
+                      <input type="text" class="form-control form-control-lg" id="" placeholder="Search for dealers, home builders, contractors" aria-label="Your name" aria-describedby="heroNameAddOn">
+                    </div>
+                    <!-- End Input Group -->
+                  </div>
+
+                  <div class="input-card-form">
+                    <!-- Input Group -->
+                    <div class="input-group input-group-merge">
+                      <span class="input-group-prepend input-group-text">
+                        <i class="bi-geo-alt"></i>
+                      </span>
+                      <input type="text" class="form-control form-control-lg" id="emailRegisterForm" placeholder="Enter your / nearby location" aria-label="Your email">
+                    </div>
+                    <!-- End Input Group -->
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-lg" id="heroNameAddOn">Search</button>
+                </div>
+                <!-- End Input Card -->
+              </form>
+              <div class="row gx-3 mt-4">
+                <div class="col-auto my-2">
+                  <a href="" class="cat_icon_box">
+                    <span class="svg-icon svg-icon-sm text-dark">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.3" d="M18.041 22.041C18.5932 22.041 19.041 21.5932 19.041 21.041C19.041 20.4887 18.5932 20.041 18.041 20.041C17.4887 20.041 17.041 20.4887 17.041 21.041C17.041 21.5932 17.4887 22.041 18.041 22.041Z" fill="#035A4B"/>
+                      <path opacity="0.3" d="M6.04095 22.041C6.59324 22.041 7.04095 21.5932 7.04095 21.041C7.04095 20.4887 6.59324 20.041 6.04095 20.041C5.48867 20.041 5.04095 20.4887 5.04095 21.041C5.04095 21.5932 5.48867 22.041 6.04095 22.041Z" fill="#035A4B"/>
+                      <path opacity="0.3" d="M7.04095 16.041L19.1409 15.1409C19.7409 15.1409 20.141 14.7409 20.341 14.1409L21.7409 8.34094C21.9409 7.64094 21.4409 7.04095 20.7409 7.04095H5.44095L7.04095 16.041Z" fill="#035A4B"/>
+                      <path d="M19.041 20.041H5.04096C4.74096 20.041 4.34095 19.841 4.14095 19.541C3.94095 19.241 3.94095 18.841 4.14095 18.541L6.04096 14.841L4.14095 4.64095L2.54096 3.84096C2.04096 3.64096 1.84095 3.04097 2.14095 2.54097C2.34095 2.04097 2.94096 1.84095 3.44096 2.14095L5.44096 3.14095C5.74096 3.24095 5.94096 3.54096 5.94096 3.84096L7.94096 14.841C7.94096 15.041 7.94095 15.241 7.84095 15.441L6.54096 18.041H19.041C19.641 18.041 20.041 18.441 20.041 19.041C20.041 19.641 19.641 20.041 19.041 20.041Z" fill="#035A4B"/>
+                      </svg>
+                    </span>
+                    <span class="title">Icon Link 1</span>
+                  </a>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-auto my-2">
+                  <a href="" class="cat_icon_box">
+                    <span class="svg-icon svg-icon-sm text-dark">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 9V11C21 11.6 20.6 12 20 12H14V8H20C20.6 8 21 8.4 21 9ZM10 8H4C3.4 8 3 8.4 3 9V11C3 11.6 3.4 12 4 12H10V8Z" fill="#035A4B"/>
+                      <path d="M15 2C13.3 2 12 3.3 12 5V8H15C16.7 8 18 6.7 18 5C18 3.3 16.7 2 15 2Z" fill="#035A4B"/>
+                      <path opacity="0.3" d="M9 2C10.7 2 12 3.3 12 5V8H9C7.3 8 6 6.7 6 5C6 3.3 7.3 2 9 2ZM4 12V21C4 21.6 4.4 22 5 22H10V12H4ZM20 12V21C20 21.6 19.6 22 19 22H14V12H20Z" fill="#035A4B"/>
+                      </svg>
+                    </span>
+                    <span class="title">Icon Link 2</span>
+                  </a>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-auto my-2">
+                  <a href="" class="cat_icon_box">
+                    <span class="svg-icon svg-icon-sm text-dark">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.3" d="M18 22H6C5.4 22 5 21.6 5 21V8C6.6 6.4 7.4 5.6 9 4H15C16.6 5.6 17.4 6.4 19 8V21C19 21.6 18.6 22 18 22ZM12 5.5C11.2 5.5 10.5 6.2 10.5 7C10.5 7.8 11.2 8.5 12 8.5C12.8 8.5 13.5 7.8 13.5 7C13.5 6.2 12.8 5.5 12 5.5Z" fill="#035A4B"/>
+                      <path d="M12 7C11.4 7 11 6.6 11 6V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V6C13 6.6 12.6 7 12 7ZM15.1 10.6C15.1 10.5 15.1 10.4 15 10.3C14.9 10.2 14.8 10.2 14.7 10.2C14.6 10.2 14.5 10.2 14.4 10.3C14.3 10.4 14.3 10.5 14.2 10.6L9 19.1C8.9 19.2 8.89999 19.3 8.89999 19.4C8.89999 19.5 8.9 19.6 9 19.7C9.1 19.8 9.2 19.8 9.3 19.8C9.5 19.8 9.6 19.7 9.8 19.5L15 11.1C15 10.8 15.1 10.7 15.1 10.6ZM11 11.6C10.9 11.3 10.8 11.1 10.6 10.8C10.4 10.6 10.2 10.4 10 10.3C9.8 10.2 9.50001 10.1 9.10001 10.1C8.60001 10.1 8.3 10.2 8 10.4C7.7 10.6 7.49999 10.9 7.39999 11.2C7.29999 11.6 7.2 12 7.2 12.6C7.2 13.1 7.3 13.5 7.5 13.9C7.7 14.3 7.9 14.5 8.2 14.7C8.5 14.9 8.8 14.9 9.2 14.9C9.8 14.9 10.3 14.7 10.6 14.3C11 13.9 11.1 13.3 11.1 12.5C11.1 12.3 11.1 11.9 11 11.6ZM9.8 13.8C9.7 14.1 9.5 14.2 9.2 14.2C9 14.2 8.8 14.1 8.7 14C8.6 13.9 8.5 13.7 8.5 13.5C8.5 13.3 8.39999 13 8.39999 12.6C8.39999 12.2 8.4 11.9 8.5 11.7C8.5 11.5 8.6 11.3 8.7 11.2C8.8 11.1 9 11 9.2 11C9.5 11 9.7 11.1 9.8 11.4C9.9 11.7 10 12 10 12.6C10 13.2 9.9 13.6 9.8 13.8ZM16.5 16.1C16.4 15.8 16.3 15.6 16.1 15.4C15.9 15.2 15.7 15 15.5 14.9C15.3 14.8 15 14.7 14.6 14.7C13.9 14.7 13.4 14.9 13.1 15.3C12.8 15.7 12.6 16.3 12.6 17.1C12.6 17.6 12.7 18 12.9 18.4C13.1 18.7 13.3 19 13.6 19.2C13.9 19.4 14.2 19.5 14.6 19.5C15.2 19.5 15.7 19.3 16 18.9C16.4 18.5 16.5 17.9 16.5 17.1C16.7 16.8 16.6 16.4 16.5 16.1ZM15.3 18.4C15.2 18.7 15 18.8 14.7 18.8C14.4 18.8 14.2 18.7 14.1 18.4C14 18.1 13.9 17.7 13.9 17.2C13.9 16.8 13.9 16.5 14 16.3C14.1 16.1 14.1 15.9 14.2 15.8C14.3 15.7 14.5 15.6 14.7 15.6C15 15.6 15.2 15.7 15.3 16C15.4 16.2 15.5 16.6 15.5 17.2C15.5 17.7 15.4 18.1 15.3 18.4Z" fill="#035A4B"/>
+                      </svg>
+                    </span>
+                    <span class="title">Icon Link 3</span>
+                  </a>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-auto my-2">
+                  <a href="" class="cat_icon_box">
+                    <span class="svg-icon svg-icon-sm text-dark">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.3" d="M18 10V20C18 20.6 18.4 21 19 21C19.6 21 20 20.6 20 20V10H18Z" fill="#035A4B"/>
+                      <path opacity="0.3" d="M11 10V17H6V10H4V20C4 20.6 4.4 21 5 21H12C12.6 21 13 20.6 13 20V10H11Z" fill="#035A4B"/>
+                      <path opacity="0.3" d="M10 10C10 11.1 9.1 12 8 12C6.9 12 6 11.1 6 10H10Z" fill="#035A4B"/>
+                      <path opacity="0.3" d="M18 10C18 11.1 17.1 12 16 12C14.9 12 14 11.1 14 10H18Z" fill="#035A4B"/>
+                      <path opacity="0.3" d="M14 4H10V10H14V4Z" fill="#035A4B"/>
+                      <path opacity="0.3" d="M17 4H20L22 10H18L17 4Z" fill="#035A4B"/>
+                      <path opacity="0.3" d="M7 4H4L2 10H6L7 4Z" fill="#035A4B"/>
+                      <path d="M6 10C6 11.1 5.1 12 4 12C2.9 12 2 11.1 2 10H6ZM10 10C10 11.1 10.9 12 12 12C13.1 12 14 11.1 14 10H10ZM18 10C18 11.1 18.9 12 20 12C21.1 12 22 11.1 22 10H18ZM19 2H5C4.4 2 4 2.4 4 3V4H20V3C20 2.4 19.6 2 19 2ZM12 17C12 16.4 11.6 16 11 16H6C5.4 16 5 16.4 5 17C5 17.6 5.4 18 6 18H11C11.6 18 12 17.6 12 17Z" fill="#035A4B"/>
+                      </svg>
+                    </span>
+                    <span class="title">Icon Link 4</span>
+                  </a>
+                </div>
+                <!-- End Col -->
+
+                <div class="col-auto my-2">
+                  <a href="" class="cat_icon_box">
+                    <span class="svg-icon svg-icon-sm text-dark">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.3" d="M20 22H4C3.4 22 3 21.6 3 21V2H21V21C21 21.6 20.6 22 20 22Z" fill="#035A4B"/>
+                      <path d="M12 14C9.2 14 7 11.8 7 9V5C7 4.4 7.4 4 8 4C8.6 4 9 4.4 9 5V9C9 10.7 10.3 12 12 12C13.7 12 15 10.7 15 9V5C15 4.4 15.4 4 16 4C16.6 4 17 4.4 17 5V9C17 11.8 14.8 14 12 14Z" fill="#035A4B"/>
+                      </svg>
+                    </span>
+                    <span class="title">Icon Link 5</span>
+                  </a>
+                </div>
+                <!-- End Col -->
+              </div>
+            </div>
+          </div>
         </div>
 
-        <section class="my-5">
-            <div class="container">
-                <div class="adv" style="background: var(--color_purple)">
-                    Advertisement
-                </div>
-            </div>
-        </section>
-
-        <section class="pb-5">
-            <div class="container">
-                <h2 class="sec_title">Featured</h2>
-                <div class="row gx-md-5 gy-md-5 gx-4 gy-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/featured 7.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/featured 8.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/featured 3.jpg" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/featured 4.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/featured 5.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/featured 6.jpg" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <h2 class="sec_title">LATEST</h2>
-                <div class="row gx-md-5 gy-md-5 gx-4 gy-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/latest 1.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/latest 2.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/latest 3.jpg" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/latest 4.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/latest 5.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/latest 6.jpg" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="listing.html" class="btn btn-primary">
-                        View All
-                    </a>
-                </div>
-            </div>
-        </section>
-    
-        <section class="my-5">
-            <div class="container">
-                <div class="adv" style="background: var(--color_cyan)">
-                    Advertisement
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5 bg_theme_light">
-            <div class="container-fluid">
-                <h2 class="sec_title">COURSES</h2>
-                <div class="row gy-4">
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/course 1.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/course 2.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/course 3.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/course 4.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/course 5.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="listing.html" class="btn btn-primary">
-                        View All
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <div class="banner">
-            <div class="item">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <div class="desc">
-                                <h1 class="fw-bold mb-3">Beaming Notes <br> Your Guide to Literature</h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                </p>
-                                <div class="text-left mt-4">
-                                    <a href="javascript:;" class="btn btn-primary">
-                                        Sign Up
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="img">
-                                <img src="image/head.svg" alt="" class="mt-md-0 mt-4">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- SVG Elements -->
+        <div class="position-absolute top-0 end-0">
+          <img src="assets/svg/components/shape-3.svg" alt="SVG" width="350">
         </div>
-
-        <section class="py-5 bg_theme_light">
-            <div class="container-fluid">
-                <h2 class="sec_title">Educational TOOLS</h2>
-                <div class="row gy-4">
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/tool 1.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/tool 2.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/tool 3.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/tool 4.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2/5">
-                        <div class="card course_card">
-                            <a href="" class="img">
-                                <img src="image/tool 5.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body text-center pb-0">
-                                <a href="" class="card-title fs-6">4 Best Tips to Write Plagiarism-Free Papers</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="listing.html" class="btn btn-primary">
-                        View All
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5">
-            <div class="container">
-                <h2 class="sec_title">Poems</h2>
-                <div class="row gx-md-5 gy-md-5 gx-4 gy-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/poem 1.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    Poet - Poet Name
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/poem 2.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    Poet - Poet Name
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/poem 3.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    Poet - Poet Name
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/poem 4.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    Poet - Poet Name
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/poem 5.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    Poet - Poet Name
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/poem 6.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    Poet - Poet Name
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="listing.html" class="btn btn-primary">
-                        View All
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5 bg_theme_light">
-            <div class="container">
-                <h2 class="sec_title">Prose</h2>
-                <div class="row gx-md-5 gy-md-5 gx-4 gy-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/poem 3.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/prose 1.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/poem 5.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/prose 4.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/prose 6.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card p-3 pb-1 artical_card">
-                            <a href="" class="img">
-                                <img src="image/prose 2.jpg" alt="" class="card-img-top">
-                            </a>
-                            <div class="card-body ">
-                                <div class="mb-2 card_tag">
-                                    January 27, 2023 by Website Contributors
-                                </div>
-                                <a href="details.html" class="card-title fs-5">4 Best Tips to Write Plagiarism-Free Papers</a>
-                                <p class="card-text">
-                                    Plagiarism is a perennial problem faced by almost every student when it comes to writing papers. There is a lot of content available on the internet, and getting some similarities
-                                </p>
-                                <div class="socials text-center ">
-                                    <a href="" class="facebook">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="linkedin">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="" class="instagram">
-                                        <i class="fa fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <a href="listing.html" class="btn btn-primary">
-                        View All
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5">
-            <div class="container">
-                <div class="adv">
-                    Advertisement
-                </div>
-            </div>
-        </section>
-
-        <div class="container subscribe_con">
-            <div class="subscribe">
-                <svg class="svg_1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#bac3ff" d="M43.6,-44.6C57.9,-29.4,71.6,-14.7,74.1,2.5C76.6,19.7,67.9,39.5,53.7,50.8C39.5,62.1,19.7,65.1,6.1,58.9C-7.5,52.8,-14.9,37.6,-19.2,26.3C-23.6,14.9,-24.7,7.5,-24.8,-0.1C-25,-7.7,-24.1,-15.4,-19.8,-30.6C-15.4,-45.7,-7.7,-68.3,3.5,-71.8C14.7,-75.3,29.4,-59.7,43.6,-44.6Z" transform="translate(100 100)" />
-                </svg>
-                <svg class="svg_2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#bac3ff" d="M33,-34.6C41,-25.1,44.5,-12.5,47,2.6C49.6,17.7,51.4,35.4,43.4,46.2C35.4,56.9,17.7,60.6,-1,61.6C-19.7,62.6,-39.4,60.8,-52.7,50.1C-65.9,39.4,-72.8,19.7,-68.1,4.7C-63.4,-10.2,-47.1,-20.5,-33.8,-30.1C-20.5,-39.6,-10.2,-48.5,1.1,-49.6C12.5,-50.8,25.1,-44.2,33,-34.6Z" transform="translate(100 100)" />
-                </svg>
-                <h5>Subscribe to get latest update</h5>
-                <form action="">
-                    <input type="text" class="form-control" placeholder="Enter Your Email ID">
-                    <button class="btn btn-primary">
-                        Submit
-                    </button>
-                </form>
-            </div>
+        <div class="position-absolute bottom-0 end-0 me-0">
+          <img src="assets/img/bricks.png" alt="" height="400">
         </div>
+        <!-- End SVG Elements -->
+      </div>
+      <!-- End Hero -->
+    </main>
+    <footer>
+        © 2022, <a href="">BimaBarracks</a> | All Rights Reserved
+    </footer>
 
-        <footer>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-12 col-12">
-                        <div class="row gy-md-3 gy-3">
-                            <div class="col-lg-4 col-md-4 col-auto">
-                                <div class="footer_item">
-                                    <p class="title">
-                                        <strong>RECOMMENDED</strong>
-                                    </p>
-                                    <ul>
-                                        <li><a href="#">Grammarly</a></li>
-                                        <li><a href="#">Udemy</a></li>
-                                        <li><a href="#">Teachable</a></li>
-                                        <li><a href="#">WPMUDev</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-auto">
-                                <div class="footer_item">
-                                    <p class="title">
-                                        <strong>BEST AD NETWORKS</strong>
-                                    </p>
-                                    <ul>
-                                        <li><a href="#">Setupad</a></li>
-                                        <li><a href="#">Ezoic</a></li>
-                                        <li><a href="#">Media.net</a></li>
-                                        <li><a href="#">iZooto</a></li>
-                                        <li><a href="#">Infolinks</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-auto">
-                                <div class="footer_item">
-                                    <p class="title">
-                                        <strong>OUR EDUCATIONAL SITES</strong>
-                                    </p>
-                                    <ul>
-                                        <li><a href="#">Mycbsemate</a></li>
-                                        <li><a href="#">Best Essay Writing Services</a></li>
-                                        <li><a href="#">The Content Wizard</a></li>
-                                        <li><a href="#">Elearning Info</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center mt-4">
-                    <div class="col-lg-8 col-md-12 col-12">
-                        <div class="copyright">
-                            <p class="text-center text-white">
-                                &COPY; All Right Reserved. 
-                            </p>
-
-                            <div class="socials">
-                                <a href="" class="facebook">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="" class="twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="" class="linkedin">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="" class="instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#ffffff08" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </footer>
-
-        <div class="footer_sticky">
-            <ul>
-                <li>
-                    <a href="">
-                        <img src="image/tools.svg" alt="">
-                        <span>Tools</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="image/agencies.svg" alt="">
-                        <span>Agencies</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="image/platforms.svg" alt="">
-                        <span>Platforms</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="image/benchmarks.svg" alt="">
-                        <span>Benchmark Report</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="image/logIN.svg" alt="">
-                        <span>Login</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="bg-transparent border-0 modal-content">
-                <div class="modal-body">
-                    <form action="" class="search_form">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <button class="input-group-text btn-primary">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
